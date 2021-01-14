@@ -190,7 +190,7 @@ public class ville {
         }
     }
 }
-class Test2 {
+class Test {
     public static void main(String[] args) {
         ville avignon = new ville(10, 10);
 
@@ -368,6 +368,7 @@ class Test2 {
                 System.out.println("moral :" + perso.getMoral());
                 System.out.println("satiete : " + perso.getSatiété());
                 System.out.println("hydratation :" + perso.getHydratation());
+
                 System.out.println("vie  :" + perso.getVie());
                 System.out.println("diplome :" + perso.getDiplome());
                 System.out.println("Pseudo :" + perso.getPseudo());

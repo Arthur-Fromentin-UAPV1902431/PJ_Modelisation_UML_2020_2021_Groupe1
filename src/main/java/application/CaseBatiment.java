@@ -84,6 +84,9 @@ class bibliotheque extends CaseBatiment{
         if (rando<5){
             perso.setpourcentageDiplome(pourcentage+10);
         }
+        else if(rando==5){
+            perso.setMoral(20);
+        }
     }
 }
 class bar extends CaseBatiment {
