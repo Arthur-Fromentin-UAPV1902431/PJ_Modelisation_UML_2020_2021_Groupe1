@@ -31,6 +31,7 @@ class université extends CaseBatiment{
     public char getName(){
         return nom;
     }
+    //un personnage va bouster ces chances de 30 pour une obtention d’un diplôme.
     public void passerExamem(personnage perso){
         int pourcentage=perso.getpourcentageDiplome();
         Random rand=new Random();
@@ -103,6 +104,7 @@ class bar extends CaseBatiment {
         perso.setMoral(10);
         perso.setVie(-3);
     }
+    // a chaque fois que le personnage  trouve une copie le personnage il a +5 de chance avoir son diplome
     public void foundCopie(personnage perso) {
         int pourcentage=perso.getpourcentageDiplome();
         Random randi=new Random();
