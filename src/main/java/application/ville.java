@@ -343,7 +343,8 @@ class Test2 {
         Scanner clavier2 = new Scanner(System.in);
         System.out.print("c'est Quoi Votre Pseudo :choisisez une lettre : ");
         String pseudo = clavier2.nextLine();
-        personnage perso=new personnage(type,pseudo) ;
+        char carac = pseudo.charAt(0);
+        personnage perso=new personnage(type,carac) ;
         System.out.print("votre personnage " +perso.getPseudo()+ " est désormais creer \n");
         System.out.print("Voici le PLAN de Votre Ville \n");
         avignon.afficher();
@@ -362,7 +363,7 @@ class Test2 {
             int direction = clavier1.nextInt();
             if (direction == 0) i = 1;
             else if (direction == 5) {
-                System.out.println("Position ligne  :" + perso.getxPerso());
+               System.out.println("Position ligne  :" + perso.getxPerso());
                 System.out.println("Position colonne : " + perso.getyPerso());
                 System.out.println("moral :" + perso.getMoral());
                 System.out.println("satiete : " + perso.getSatiété());
@@ -375,7 +376,7 @@ class Test2 {
 
                 perso.deplacerPersonnage(direction);
                 ville.verifPosition(avignon, perso, batM, batU, batB, batb, batF, f, e);
-                avignon.placer(perso.getxPerso(), perso.getyPerso(), 'V');
+                avignon.placer(perso.getxPerso(), perso.getyPerso(), perso.getPseudo());
                 avignon.afficher();
             }
 

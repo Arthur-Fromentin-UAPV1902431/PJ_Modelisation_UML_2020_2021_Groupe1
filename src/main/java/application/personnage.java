@@ -7,11 +7,11 @@ public  class personnage {
     protected int moral;
     protected int diplome;
     protected int pourcentageDiplome;
-    protected String pseudo;
+    protected char pseudo;
     protected int xPerso;
     protected int yPerso;
     protected boolean maillot ; //pour aller dans un d'eau
-    public personnage(int type, String pseudo) {
+    public personnage(int type, char pseudo) {
         //1->standard 2->hyppie 3 ->pressé
         switch (type) {
             case 1:
@@ -75,7 +75,7 @@ public  class personnage {
         return satiété;
     }
 
-    public String getPseudo() {
+    public char getPseudo() {
         return pseudo;
     }
 
@@ -126,7 +126,7 @@ public  class personnage {
         }
     }
 
-    public void setPseudo(String pseudo) {
+    public void setPseudo(char pseudo) {
         this.pseudo = pseudo;
     }
 
@@ -162,7 +162,7 @@ public  class personnage {
             this.setVie(-10);
         }
         else{
-            System.out.println("le personnage " +this.getPseudo() +" est mort" );
+            System.out.println("le personnage  " +this.getPseudo() +" est mort" );
 
         }
 
